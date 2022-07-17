@@ -1,13 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 80vh;
+  font-family: "Roboto", sans-serif;
+  background-color: #0b2434;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+main {
+  max-width: 800px;
+  height: 700px;
+  margin: 4% auto;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+.container {
+  display: grid;
+  grid-template: auto auto / repeat(5, 1fr);
+  gap: 40px;
+}
+.timer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: #0b2434;
+  color: #fff;
+}
+
+.content {
+  text-align: center;
+  width: 380px;
+}
+
+.content h1 {
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px #aaa;
+  font-size: 40px;
+}
+
+.content p {
+  margin-top: -1rem;
+  font-size: 22px;
+  color: rgb(49, 49, 49);
+}
+
+.die {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 1rem 4rem;
+  /* margin-top: 5rem; */
+  font-size: 30px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(0, 147, 206);
+  color: white;
+  cursor: pointer;
+}
+
+.btn:active {
+  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+  background-color: rgb(0, 175, 102);
+}
+.congrat {
+  animation: congratAnim infinite 5s;
+}
+
+@keyframes congratAnim {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
