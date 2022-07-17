@@ -14,7 +14,7 @@ function App() {
     if (running) {
       interval = setInterval(() => {
         setTimer(prev => prev + 1)
-      }, 200);
+      }, 1000);
     } else if (!running) {
       clearInterval(interval);
     }
